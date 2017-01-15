@@ -41,7 +41,7 @@ You can also use it from node:
 ```javascript
 const convert = require('csvy');
 
-csvy(`{"a":1}`, {delimiter: ';'})
+convert(`{"a":1}`, {delimiter: ';'})
 ```
 
 ## Tests
