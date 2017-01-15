@@ -5,12 +5,12 @@
   "main": "index.js",
   "bin": "./bin/csvy",
   "scripts": {
-    "build": "./node_modules/.bin/tsc -t ES6 --module commonjs --moduleResolution node index.ts ./bin/csvy.ts --outFile ./bin/csvy",
-    "test": "npm run build && ./node_modules/.bin/_mocha",
-    "watch": "npm run test-watch"
+    "bin": "./node_modules/.bin/tsc -t ES6 --moduleResolution node ./bin/csvy.ts --outFile ./bin/csvy",
+    "build": "./node_modules/.bin/tsc -t ES6 --module commonjs --moduleResolution node index.ts && npm run bin",
+    "test": "npm run build && ./node_modules/.bin/_mocha"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Konstantin Gorodinskiy <mail@konstantin.io>",
+  "license": "MIT",
   "dependencies": {
     "js-yaml": "^3.7.0",
     "mocha": "^3.2.0",
