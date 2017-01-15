@@ -1,4 +1,5 @@
 # CSVy
+![build](https://travis-ci.org/gko/csvy.svg?branch=master)
 yaml/json → csv
 
 ## Installation
