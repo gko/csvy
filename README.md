@@ -3,7 +3,7 @@
 
 yaml/json → csv
 
-Automatically flattens fields and arrays:
+Flattens fields and arrays:
 ```json
 {
   "name": {
