@@ -3,6 +3,23 @@
 
 yaml/json → csv
 
+Automatically flattens fields and arrays:
+```json
+{
+  "name": {
+    "first": "John",
+    "last": "Snow"
+  },
+  "tags": ["first", "second", "last"]
+}
+```
+
+turns to:
+```csv
+"name.first","name.last","tags.0","tags.1","tags.2"
+"John","Snow","first","second","last"
+```
+
 ## Installation
 
 ```bash
