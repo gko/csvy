@@ -9,7 +9,7 @@ const path = require('path');
 const fs = require('fs');
 
 app.version(cfg.version)
-  .option('-f, --format <format>', 'input format.(optional)', /^(css|json|js|html|xml)$/, 'json')
+  .option('-d, --delimiter <delimiter>', 'delimiter symbol', ',')
   .option('-o, --output <file>', 'output file')
   .description(cfg.description)
 
@@ -36,7 +36,7 @@ if(app.args.length) {
   fs.readFile(app.args[0], 'utf8', (err, data) => {
     if (err) throw err;
 
-    output(convert(data));
+    output(convert(data, {delimiter: app.delimiter}));
   });
 } else {
   let data = '';
@@ -49,6 +49,6 @@ if(app.args.length) {
   });
 
   process.stdin.on('end', function() {
-    output(convert(data));
+    output(convert(data, {delimiter: app.delimiter}));
   });
 }

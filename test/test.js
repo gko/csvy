@@ -65,6 +65,10 @@ describe('cli', () => {
     assert.equal(exec(`echo '{"a": 1, "b": 2}' | node ./bin/csvy`).toString(), '"a","b"\n"1","2"\n')
   })
 
+  it('custom delimiter', () => {
+    assert.equal(exec(`echo '{"a": 1, "b": 2}' | node ./bin/csvy -d ';'`).toString(), '"a";"b"\n"1";"2"\n')
+  })
+
   it('convert from file', () => {
     assert.equal(exec(`node ./bin/csvy ./test/test2.json`).toString(), '"a","b"\n"1","2"\n')
   })
