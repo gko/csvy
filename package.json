@@ -19,9 +19,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "js-yaml": "^3.7.0",
-    "mocha": "^3.2.0",
-    "typescript": "^2.1.5"
+    "js-yaml": "^3.7.0"
   },
   "keywords": [
     "yaml",
@@ -30,6 +28,8 @@
     "csv"
   ],
   "devDependencies": {
+    "mocha": "^3.2.0",
+    "typescript": "^2.1.5",
     "@types/node": "^7.0.0"
   }
 }
