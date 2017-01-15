@@ -13,7 +13,7 @@ const isEmpty = (o) => {
  * @param {Object | Array} o — object to crawl
  * @param {number} pKey — parent key
  */
-const getKeys = (o = null, pKey) => {
+const getKeys = (o, pKey) => {
     if (!o) {
         return new Set();
     }
@@ -64,8 +64,8 @@ const addQuotes = (str) => {
     // we make it a string
     return `"${('' + (str || "")).replace('"', '""')}"`;
 };
-module.exports = (input, options = {}) => {
-    let delimiter = options['delimiter'] || ',';
+module.exports = (input, options) => {
+    let delimiter = options ? options['delimiter'] || ',' : ',';
     let json;
     let csv = "";
     if (typeof input === "string") {
