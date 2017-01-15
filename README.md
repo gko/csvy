@@ -11,19 +11,21 @@ npm i csvy -g
 
 ## Usage
 
+```bash
 Usage: csvy [options]
 
 yaml/json converter to csv
 
 Options:
 
-  -h, --help                   output usage information
+    -h, --help                   output usage information
   
-  -V, --version                output the version number
+    -V, --version                output the version number
   
-  -d, --delimiter <delimiter>  delimiter symbol
+    -d, --delimiter <delimiter>  delimiter symbol
   
-  -o, --output <file>          output file
+    -o, --output <file>          output file
+```
 
 examples:
 ```bash
