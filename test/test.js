@@ -54,14 +54,23 @@ describe('Converting', () => {
 
 describe('cli', () => {
   it('empty convert', () => {
-    assert.equal(exec('echo "{}" | node ./bin/csvy').toString(), "")
+    assert.equal(exec('echo "{}" | node ./bin/csvy').toString(), '\n')
   })
 
   it('empty array convert', () => {
-    assert.equal(exec('echo "[]" | node ./bin/csvy').toString(), "")
+    assert.equal(exec('echo "[]" | node ./bin/csvy').toString(), '\n')
   })
 
   it('simple object convert', () => {
-    assert.equal(exec(`echo '{"a": 1, "b": 2}' | node ./bin/csvy`).toString(), '"a","b"\n"1","2"')
+    assert.equal(exec(`echo '{"a": 1, "b": 2}' | node ./bin/csvy`).toString(), '"a","b"\n"1","2"\n')
+  })
+
+  it('convert from file', () => {
+    assert.equal(exec(`node ./bin/csvy ./test/test2.json`).toString(), '"a","b"\n"1","2"\n')
+  })
+
+  it('write result to file', () => {
+    exec(`node ./bin/csvy ./test/test2.json -o ./test/test.tmp.csv`)
+    assert.equal(read(__dirname + '/test.tmp.csv'), '"a","b"\n"1","2"')
   })
 })

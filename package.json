@@ -1,6 +1,7 @@
 {
   "name": "csvy",
-  "version": "0.3.0",
+  "version": "0.4.0",
+  "author": "Konstantin Gorodinskiy <mail@konstantin.io>",
   "description": "yaml/json converter to csv",
   "main": "index.js",
   "bin": "./bin/csvy",
@@ -9,13 +10,22 @@
     "build": "./node_modules/.bin/tsc -t ES6 --module commonjs --moduleResolution node index.ts && npm run bin",
     "test": "npm run build && ./node_modules/.bin/_mocha"
   },
-  "author": "Konstantin Gorodinskiy <mail@konstantin.io>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gko/csvy"
+  },
   "license": "MIT",
   "dependencies": {
     "js-yaml": "^3.7.0",
     "mocha": "^3.2.0",
     "typescript": "^2.1.5"
   },
+  "keywords": [
+    "yaml",
+    "json",
+    "convert",
+    "csv"
+  ],
   "devDependencies": {
     "@types/node": "^7.0.0"
   }

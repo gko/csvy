@@ -26,7 +26,6 @@ let write = (p, data) => new Promise((res, rej) => {
 let err = err => console.log(err);
 let output = o => {
   if (!app.output) {
-    console.log(convert("{a:1}"));
     console.log(o);
   } else {
     write(app.output, o).catch(err);
