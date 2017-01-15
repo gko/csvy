@@ -18,8 +18,11 @@ yaml/json converter to csv
 Options:
 
   -h, --help                   output usage information
+  
   -V, --version                output the version number
+  
   -d, --delimiter <delimiter>  delimiter symbol
+  
   -o, --output <file>          output file
 
 examples:
