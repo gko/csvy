@@ -60,13 +60,16 @@ const convert = require('csvy');
 
 convert(`{"a":1}`, {delimiter: ';'})
 ```
-
 ## Tests
 
 To run tests you simply need to do:
 ```bash
 npm run test
 ```
+
+## Like it?
+
+:star: this repo
 
 ## License
 
