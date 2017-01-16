@@ -99,13 +99,12 @@ export = (input: string | Object, options?: Object): string => {
   }
 
   let keys = Array.from(getKeys(json))
-  let result: string = ``;
-  result += keys.map(addQuotes).join(delimiter) + '\n'
+  csv += keys.map(addQuotes).join(delimiter) + '\n'
   if (json instanceof Array) {
-    result += json.map(json => getValues(json, keys).map(addQuotes).join(delimiter)).join('\n')
+    csv += json.map(json => getValues(json, keys).map(addQuotes).join(delimiter)).join('\n')
   } else {
-    result += getValues(json, keys).map(addQuotes).join(delimiter)
+    csv += getValues(json, keys).map(addQuotes).join(delimiter)
   }
 
-  return result
+  return csv
 }
