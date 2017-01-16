@@ -46,7 +46,7 @@ Options:
 
 examples:
 ```bash
-csv -o test.csv ./test.json
+csvy -o test.csv ./test.json
 ```
 
 ```bash
