@@ -1,5 +1,6 @@
 # CSVy
 ![build](https://travis-ci.org/gko/csvy.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/gko/csvy/badge.svg?branch=master)](https://coveralls.io/github/gko/csvy?branch=master)
 
 yaml/json → csv
 
